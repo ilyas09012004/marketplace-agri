@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Tambahkan warna custom */
+  --color-agri-green: #4ade80;
+  --color-gray-describe: #6b7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-agri-green: var(--color-agri-green);
+  --color-gray-describe: var(--color-gray-describe);
+  --font-sans: 'Poppins', sans-serif;
+  --font-mono: 'Fira Code', monospace; /* Opsional */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans); /* Gunakan font dari theme */
+}
+
+.text-agri-green {
+  @apply text-green-600;
+}
+
+.bg-agri-green {
+  @apply bg-green-500;
+}
+
+/* Untuk button */
+.bg-agri-green:hover {
+  @apply bg-green-600;
+}
